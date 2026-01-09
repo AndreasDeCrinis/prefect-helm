@@ -639,6 +639,8 @@ secret:
   # -- name for the Secret containing the PostgreSQL connection string
   # To provide an existing Secret, provide a name and set `create=false`
   name: ""
+  # -- key for the connection string in the secret objects e.g. jdbc-uri for cnpg operated postgres instance
+  key: "connection-string"
   # -- username for the PostgreSQL connection string
   username: ""
   # -- password for the PostgreSQL connection string

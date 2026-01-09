@@ -111,7 +111,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: {{ include "server.postgres-string-secret-name" . }}
-                  key: connection-string
+                  key: {{ .Values.secret.key }}
               {{- end }}
             {{- if .Values.server.basicAuth.enabled }}
             - name: PREFECT_SERVER_API_AUTH_STRING

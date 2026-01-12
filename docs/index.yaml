@@ -3,7 +3,43 @@ entries:
   prefect-server:
   - apiVersion: v2
     appVersion: 3-latest
-    created: "2026-01-12T09:29:46.666206+01:00"
+    created: "2026-01-12T10:04:34.485085+01:00"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.31.4
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 22.0.4
+    description: Prefect server application bundle
+    digest: 9b1821fb9323b3a94f4127fda66bb4bc1c0ff97c0db09ab0cbb254ddc7415e09
+    home: https://github.com/PrefectHQ
+    maintainers:
+    - email: jamie@prefect.io
+      name: jamiezieziula
+    - email: jimi@prefect.io
+      name: jimid27
+    - email: edward@prefect.io
+      name: parkedwards
+    - email: mitchell@prefect.io
+      name: mitchnielsen
+    name: prefect-server
+    sources:
+    - https://github.com/PrefectHQ/prefect-helm
+    type: application
+    urls:
+    - prefect-server-0.0.1.tgz
+    version: 0.0.1
+  - apiVersion: v2
+    appVersion: 3-latest
+    created: "2026-01-12T10:04:34.468907+01:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -37,4 +73,4 @@ entries:
     urls:
     - prefect-server-0.0.0.tgz
     version: 0.0.0
-generated: "2026-01-12T09:29:46.652064+01:00"
+generated: "2026-01-12T10:04:34.451329+01:00"
